@@ -2,7 +2,11 @@
     <div class="thf-md-12 thf-lg-4 thf-mt-2"></div>
 
     <thf-container class="thf-md-12 thf-lg-4 thf-mt-2"> 
-        <thf-page-login></thf-page-login>
+
+        <thf-page-login
+            (t-login-submit)="loginSubmit($event)">
+        </thf-page-login>
+    
     </thf-container>
   
     <div class="thf-md-12 thf-lg-4 thf-mt-2"></div>
