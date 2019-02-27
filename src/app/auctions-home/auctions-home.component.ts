@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 export class AuctionsHomeComponent {
   title = 'Auctions';
   menus = [
-    { label: 'Dashboard', link: './dashboard' }
+    { label: 'Meus Leilões', link: './dashboard' }
   ];
 }

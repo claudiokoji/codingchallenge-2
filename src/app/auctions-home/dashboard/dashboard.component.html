@@ -1,8 +1,30 @@
 <thf-toolbar 
-    t-title="Dashboard">
+    t-title="Portal de Leilões">
 </thf-toolbar>
 
 
 <thf-page-default>
-    <h1>Dashboard</h1>    
+    <thf-container class="thf-lg-12">
+        <thf-divider class="thf-md-12" t-label="Rascunhos"></thf-divider>
+        <div>
+            <app-auction></app-auction>  
+            <app-auction></app-auction>    
+        </div>
+    </thf-container>
+
+    <thf-container class="thf-lg-12">
+        <thf-divider class="thf-md-12" t-label="Meus Leilões"></thf-divider>
+        <div>
+            <app-auction></app-auction>  
+            <app-auction></app-auction>  
+        </div>
+    </thf-container>
+
+    <thf-container class="thf-lg-12">
+        <thf-divider class="thf-md-12" t-label="Leilões Finalizados"></thf-divider>
+        <div>
+            <app-auction></app-auction>  
+            <app-auction></app-auction>  
+        </div>
+    </thf-container>
 </thf-page-default>

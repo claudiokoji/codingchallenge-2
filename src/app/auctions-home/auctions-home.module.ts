@@ -7,6 +7,8 @@ import { ThfModule } from '@totvs/thf-ui';
 import { SharedModule } from '../shared/shared.module';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AuctionComponent } from './dashboard/auction/auction.component';
+import { AuctionModule } from './dashboard/auction/auction.module';
 
 
 @NgModule({
@@ -19,7 +21,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
         ThfModule,
         RouterModule,
         SharedModule,
-        RouterModule
+        RouterModule,
+        AuctionModule
 
     ],
     exports: [
