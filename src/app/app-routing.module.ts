@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AuctionsHomeComponent } from './auctions-home/auctions-home.component';
-import { DashboardComponent } from './auctions-home/dashboard/dashboard.component';
+import { AuctionsHomeComponent } from './auctions/auctions-home.component';
+import { DashboardComponent } from './auctions/dashboard/dashboard.component';
+import { OpenAuctionsComponent } from './auctions/open-auctions/open-auctions.component';
 
 
 
@@ -22,7 +23,11 @@ const routes: Routes = [
           { 
               path: 'dashboard', 
               component: DashboardComponent,
-          }
+          },
+          { 
+            path: 'open-auctions', 
+            component: OpenAuctionsComponent,
+        }
       ]
   }
 ];

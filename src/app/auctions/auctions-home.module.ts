@@ -7,14 +7,15 @@ import { ThfModule } from '@totvs/thf-ui';
 import { SharedModule } from '../shared/shared.module';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { AuctionComponent } from './dashboard/auction/auction.component';
-import { AuctionModule } from './dashboard/auction/auction.module';
+import { AuctionModule } from './auction/auction.module';
+import { OpenAuctionsComponent } from './open-auctions/open-auctions.component';
 
 
 @NgModule({
     declarations: [
         AuctionsHomeComponent,
-        DashboardComponent
+        DashboardComponent,
+        OpenAuctionsComponent
     ],
     imports: [
         CommonModule,

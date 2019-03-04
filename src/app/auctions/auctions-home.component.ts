@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 export class AuctionsHomeComponent {
   title = 'Auctions';
   menus = [
-    { label: 'Meus Leilões', link: './dashboard' }
+    { label: 'Meus Leilões', link: './dashboard' },
+    { label: 'Leilões Abertos', link: './open-auctions' }
   ];
 }

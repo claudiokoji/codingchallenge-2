@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
-import { AuctionsHomeModule } from './auctions-home/auctions-home.module';
+import { AuctionsHomeModule } from './auctions/auctions-home.module';
 
 @NgModule({
   declarations: [

@@ -1,0 +1,61 @@
+<ng-container [ngSwitch]="template_type">
+  <ng-container *ngSwitchCase="1">
+    <thf-widget
+      class="thf-md-3"
+      t-primary-label="Excluir"
+      t-secondary-label="Ativar">
+      <div class="thf-row">
+        <div class="thf-lg-4">
+          <img [src]="photo_url" width="200" height="160">
+        </div>
+      </div>
+      <div class="thf-row">
+        <div class="thf-lg-8">
+          <p class="thf-font-text-large-bold"> {{ name }} </p>
+          <p class="thf-font-text" *ngIf="bid_type==2"> Lance fixo: R$ {{ bid_step | number:'.2' }} </p>
+          <p class="thf-font-text-bold"> R$ {{ base_price | number:'.2' }}  </p>
+        </div>
+      </div>
+    </thf-widget>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="2">
+    <thf-widget
+      class="thf-md-3">
+      <div class="thf-row">
+        <div class="thf-lg-4">
+          <img [src]="photo_url" width="200" height="160">
+        </div>
+      </div>
+      <div class="thf-row">
+        <div class="thf-lg-8">
+          <p class="thf-font-text-large-bold"> {{ name }} </p>
+          <p class="thf-font-text" *ngIf="bid_type==2; else freeBid"> Lance fixo: R$ {{ bid_step | number:'.2' }} </p>
+          <ng-template #freeBid>
+            <p class="thf-font-text"> Lance Livre</p>
+          </ng-template>
+          <p class="thf-font-text-bold"> R$ {{ base_price | number:'.2' }}  </p>
+        </div>
+      </div>
+    </thf-widget>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="3">
+    <thf-widget
+      class="thf-md-12 thf-mt-2 thf-mb-2">
+      <div class="thf-row">
+        <div class="thf-lg-4">
+        
+        </div>
+      </div>
+      <div class="thf-row">
+        <div class="thf-lg-8">
+          <p class="thf-font-text-large-bold"> {{ name }} </p>
+          <p class="thf-font-text" *ngIf="bid_type==2"> Lance fixo: R$ {{ bid_step | number:'.2' }} </p>
+          <p class="thf-font-text-bold"> R$ {{ base_price | number:'.2' }}  </p>
+        </div>
+      </div>
+    </thf-widget>
+  </ng-container>
+</ng-container>
+
