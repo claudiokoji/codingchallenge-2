@@ -9,12 +9,15 @@ import { SharedModule } from '../shared/shared.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuctionModule } from './auction/auction.module';
 import { OpenAuctionsComponent } from './open-auctions/open-auctions.component';
+import { AuctionCreationComponent } from './auction-creation/auction-creation.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 @NgModule({
     declarations: [
         AuctionsHomeComponent,
         DashboardComponent,
+        AuctionCreationComponent,
         OpenAuctionsComponent
     ],
     imports: [
@@ -23,7 +26,10 @@ import { OpenAuctionsComponent } from './open-auctions/open-auctions.component';
         RouterModule,
         SharedModule,
         RouterModule,
-        AuctionModule
+        AuctionModule,
+        ReactiveFormsModule,
+        FormsModule
+        
 
     ],
     exports: [

@@ -1,0 +1,59 @@
+<thf-container class="thf-lg-12 thf-mt-2 thf-mb-2">
+    <thf-divider class="thf-md-12" t-label="Incluir Leilão"></thf-divider>
+    <form [formGroup]="auctionForm">
+        <thf-container class="thf-md-12 thf-lg-6 thf-mt-2"> 
+                <thf-input
+                    class="thf-md-12"
+                    formControlName="produto"
+                    t-clean
+                    t-required
+                    t-label="Produto">
+                </thf-input>
+
+
+                <thf-input
+                    class="thf-md-6"
+                    formControlName="produto"
+                    t-clean
+                    t-required
+                    t-label="Preço Base R$">
+                </thf-input>
+
+                <thf-switch
+                    class="thf-md-6"
+                    formControlName="bidType"
+                    t-label="Tipo de Leilão"
+                    t-label-off="Lance Fixo"
+                    t-label-on="Lance Livre">
+                </thf-switch>
+
+                <thf-input
+                    class="thf-md-6"
+                    formControlName="produto"
+                    t-clean
+                    t-required
+                    [t-disabled]="!bidType"
+                    t-label="Valor do incremento do lance R$">
+                </thf-input>
+
+
+                <thf-upload
+                    class="thf-md-12"
+                    t-help="Maximum file size limit: 300kb"
+                    t-label="Foto do Produto"
+                    t-required
+                    t-restrictions="{maxSize: 300}"
+                    t-url="https://thf.totvs.com.br/sample/api/uploads/addFile">
+                </thf-upload>
+
+        </thf-container>
+    </form>
+</thf-container>
+
+<thf-container class="thf-lg-12 thf-mt-2 thf-mb-2">
+    <thf-divider class="thf-md-12" t-label="Rascunhos"></thf-divider>
+    <div>
+        <app-auction [template_type]="1"></app-auction>  
+        <app-auction [template_type]="1"></app-auction>    
+    </div>  
+</thf-container>

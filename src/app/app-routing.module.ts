@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AuctionsHomeComponent } from './auctions/auctions-home.component';
 import { DashboardComponent } from './auctions/dashboard/dashboard.component';
 import { OpenAuctionsComponent } from './auctions/open-auctions/open-auctions.component';
+import { AuctionCreationComponent } from './auctions/auction-creation/auction-creation.component';
 
 
 
@@ -25,9 +26,13 @@ const routes: Routes = [
               component: DashboardComponent,
           },
           { 
+            path: 'auction-creation', 
+            component: AuctionCreationComponent,
+          },
+          { 
             path: 'open-auctions', 
             component: OpenAuctionsComponent,
-        }
+          }
       ]
   }
 ];
