@@ -1,0 +1,89 @@
+<thf-toolbar t-title="Portal de Leilões"></thf-toolbar>
+
+<thf-toolbar t-title="Rascunhos"></thf-toolbar>
+
+<div class="thf-mt-1 thf-lg-9">
+    <thf-widget class="thf-md-12 thf-sm-mb-1 thf-mb-1 thf-lg-mb-1">
+      <div class="thf-row">
+        <div class="thf-md-3 thf-lg-2">
+          <thf-avatar t-size="lg" t-src="assets/graphics/{{ userData.photo }}"></thf-avatar>
+        </div>
+        <div class="thf-md-14 thf-lg-3">
+          <div class="thf-mb-1">
+            <thf-info
+              t-label="Nome do Leilão"
+              [t-value]="userData.name">
+            </thf-info>
+            <thf-tag 
+              t-value="Encerra em 07:05:23">
+            </thf-tag>
+            <thf-tag
+              t-value="Valor atual: R$ 95,00">
+          </thf-tag>
+          </div>
+          <div class="thf-mb-1">
+            <thf-info
+              class="thf-mt-2"
+              t-label="Email"
+              [t-value]="userData.email">
+            </thf-info>
+          </div>
+        </div>
+        <div class="thf-md-14 thf-lg-2">
+          <thf-avatar t-size="lg" t-src="assets/graphics/{{ userData.photo }}"></thf-avatar>
+        </div>
+        <div class="thf-md-3 thf-lg-3">
+          <div class="thf-mb-1">
+            <thf-info
+              t-label="Nome do Leilão"
+              [t-value]="userData.name">
+            </thf-info>
+            <thf-tag 
+              t-value="Encerra em 07:05:23">
+            </thf-tag>
+            <thf-tag
+              t-value="Valor atual: R$ 95,00">
+          </thf-tag>
+          </div>
+          <div class="thf-mb-1">
+            <thf-info
+              class="thf-mt-2"
+              t-label="Email"
+              [t-value]="userData.email">
+            </thf-info>
+          </div>
+        </div>      
+      </div>  
+    </thf-widget>
+
+<thf-toolbar t-title="Meus Leilões"></thf-toolbar>
+
+<thf-toolbar t-title="Leilões Finalizados"></thf-toolbar>
+
+<thf-input></thf-input>
+
+<thf-list (t-show-more)="showMoreFunction()" [t-show-more-disabled]="showMoreDisabled">
+
+  <thf-list-item *ngFor="let item of data; let i = index"  [t-title]="item.title"  [t-index]="i"  [t-actions]="eventsObject2">
+
+    <thf-list-item-content style="display:flex">
+
+      <thf-avatar
+        t-src="https://thf.totvs.com.br/assets/graphics/logo-thf.png">
+      </thf-avatar>
+
+      <thf-info t-label="Cadastro" [t-value]="item.register"></thf-info>
+
+      <thf-info t-label="E-mail" [t-value]="item.mail" style="margin-left: 80px;"></thf-info>
+
+      <thf-info t-label="Última Atualização" [t-value]="item.updated" style="margin-left: 80px;"></thf-info>
+
+      
+       </thf-list-item-content>
+
+    <thf-list-item-detail>
+
+      <div>Outros detalhes a serem exibidos</div>
+       </thf-list-item-detail>
+     </thf-list-item>
+   </thf-list>

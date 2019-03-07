@@ -1,0 +1,3 @@
+<thf-page-login 
+    (t-login-submit)="login()">
+</thf-page-login>

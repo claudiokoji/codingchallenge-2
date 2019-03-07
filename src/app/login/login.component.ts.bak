@@ -1,0 +1,28 @@
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { ThfPageLogin } from '@totvs/thf-templates/components/thf-page-login';
+
+@Component({
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
+})
+export class LoginComponent implements OnInit {
+
+  @Output('logar') logar = new EventEmitter<ThfPageLogin>(); 
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+  login() {
+    //console.log(this.fazerLogin);
+    console.log("LOGIN COMPONENT");
+    this.logar.emit({
+      login: "teste@gmail.com",
+      password: "123",
+      rememberUser: false
+    });
+  }
+
+}
