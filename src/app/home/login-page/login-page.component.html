@@ -1,0 +1,38 @@
+<app-header></app-header>
+<div class="wrapper fadeInDown">
+    <div class="login-form">
+        <form [formGroup]="loginForm" class="form mt-4" (submit)="login()">
+            <h2 class="text-center">Log in</h2>
+            <div class="form-group">
+                <input #userNameInput
+                    formControlName="email"
+                    class="form-control"
+                    placeholder="Email"
+                    required="required"
+                    autofocus>
+                <app-vmessage
+                    text="Favor preencher com um email válido."
+                    *ngIf="loginForm.get('email').errors?.required">
+                </app-vmessage>
+            </div>
+            <div class="form-group">
+                <input
+                    formControlName="password"
+                    type="password"
+                    class="form-control"
+                    placeholder="Password"
+                    required="required">
+                <app-vmessage
+                    text="Favor preencher com uma senha válida."
+                    *ngIf="loginForm.get('password').errors?.required">
+                </app-vmessage>
+            </div>
+            <div class="form-group">
+                <button [disabled]="loginForm.invalid" type="submit" class="btn btn-primary btn-block">Log in</button>
+            </div>
+            <div class="clearfix">
+                <label class="pull-left checkbox-inline"><input type="checkbox"> Remember me</label>
+            </div>
+        </form>
+    </div>
+</div>
