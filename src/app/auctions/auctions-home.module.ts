@@ -11,6 +11,7 @@ import { AuctionModule } from './auction/auction.module';
 import { OpenAuctionsComponent } from './open-auctions/open-auctions.component';
 import { AuctionCreationComponent } from './auction-creation/auction-creation.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { AuctionListModule } from './auction-list/auction-list.module';
 
 
 @NgModule({
@@ -27,10 +28,9 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
         SharedModule,
         RouterModule,
         AuctionModule,
+        AuctionListModule,
         ReactiveFormsModule,
         FormsModule
-        
-
     ],
     exports: [
         AuctionsHomeComponent

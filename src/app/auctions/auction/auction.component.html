@@ -1,9 +1,6 @@
 <ng-container [ngSwitch]="template_type">
   <ng-container *ngSwitchCase="1">
-    <thf-widget
-      class="thf-md-3"
-      t-primary-label="Excluir"
-      t-secondary-label="Ativar">
+
       <div class="thf-row">
         <div class="thf-lg-4">
           <img [src]="photo_url" width="200" height="160">
@@ -16,12 +13,12 @@
           <p class="thf-font-text-bold"> R$ {{ base_price | number:'.2' }}  </p>
         </div>
       </div>
-    </thf-widget>
+
   </ng-container>
 
   <ng-container *ngSwitchCase="2">
     <thf-widget
-      class="thf-md-3">
+      class="thf-md-3 thf-mt-1 thf-mb-1">
       <div class="thf-row">
         <div class="thf-lg-4">
           <img [src]="photo_url" width="200" height="160">
@@ -42,7 +39,7 @@
 
   <ng-container *ngSwitchCase="3">
     <thf-widget
-      class="thf-md-12 thf-mt-2 thf-mb-2">
+      class="thf-md-12 thf-mt-1 thf-mb-1">
       <div class="thf-row">
         <div class="thf-md-3">
             <img [src]="photo_url" width="100" height="80">
