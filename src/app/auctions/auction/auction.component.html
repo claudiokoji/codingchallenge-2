@@ -1,0 +1,112 @@
+<ng-container [ngSwitch]="template_type">
+  <ng-container *ngSwitchCase="1">
+
+      <div class="thf-row">
+        <div class="thf-lg-4">
+          <img [src]="photo_url" width="200" height="160">
+        </div>
+      </div>
+      <div class="thf-row">
+        <div class="thf-lg-8">
+          <p class="thf-font-text-large-bold"> {{ name }} </p>
+          <p class="thf-font-text" *ngIf="bid_type==2"> Lance fixo: R$ {{ bid_step | number:'.2' }} </p>
+          <p class="thf-font-text-bold"> R$ {{ base_price | number:'.2' }}  </p>
+        </div>
+      </div>
+
+  </ng-container>
+
+  <ng-container *ngSwitchCase="2">
+    <thf-widget
+      class="thf-md-3 thf-mt-1 thf-mb-1">
+      <div class="thf-row">
+        <div class="thf-lg-4">
+          <img [src]="photo_url" width="200" height="160">
+        </div>
+      </div>
+      <div class="thf-row">
+        <div class="thf-lg-8">
+          <p class="thf-font-text-large-bold"> {{ name }} </p>
+          <p class="thf-font-text" *ngIf="bid_type==2; else freeBid"> Lance fixo: R$ {{ bid_step | number:'.2' }} </p>
+          <ng-template #freeBid>
+            <p class="thf-font-text"> Lance Livre</p>
+          </ng-template>
+          <p class="thf-font-text-bold"> R$ {{ base_price | number:'.2' }}  </p>
+        </div>
+      </div>
+    </thf-widget>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="3">
+    <thf-widget
+      class="thf-md-12 thf-mt-1 thf-mb-1">
+      <div class="thf-row">
+        <div class="thf-md-3">
+            <img [src]="photo_url" width="100" height="80">
+        </div>
+        
+        <div class="thf-md-2">
+            <p class="thf-font-text-large-bold"> {{ name }} </p>
+        </div>
+
+        <div class="thf-md-3">
+            <p class="thf-font-text-large-bold"> {{ name }} </p>
+            <p class="thf-font-text-large-bold"> 30º lance em 1d 13h 33m 28s </p>
+        </div>
+
+        <div class="thf-md-3">
+            <p class="thf-font-text-large-bold"> R$ {{ base_price | number:'.2' }}  </p>
+        </div>
+
+
+        <thf-button
+          class="thf-md-1"
+          [t-icon]="detailIcon"
+          [t-type]="detailType"
+          (t-click)="showDetailsClick()">
+        </thf-button>
+
+
+        <div class="thf-md-12 thf-mt-1 thf-mb-1" *ngIf="showDetails">
+          <thf-widget
+          class="thf-md-4 thf-mt-1 thf-mb-1">
+
+          <div class="thf-font-display thf-text-center">36</div>
+          <div class="thf-text-center">Lances Recebidos</div>
+
+        </thf-widget>
+
+        <thf-widget
+          class="thf-md-4 thf-mt-1 thf-mb-1">
+          <thf-chart
+            class="thf-md-12"
+            t-title="Evolução"
+            t-height="260"
+            t-type="line"
+            [t-categories]="categories"
+            [t-series]="series">
+          </thf-chart>
+        </thf-widget>
+
+        <thf-widget
+          class="thf-md-4 thf-mt-1 thf-mb-1">
+          <thf-chart
+            class="thf-md-12"
+            t-title="Evolução"
+            t-height="260"
+            t-type="line"
+            [t-categories]="categories"
+            [t-series]="series">
+          </thf-chart>
+        </thf-widget>
+
+  
+
+    
+       </div>
+
+      </div>
+    </thf-widget>
+  </ng-container>
+</ng-container>
+

@@ -1,0 +1,33 @@
+<ng-container [ngSwitch]="template_type">
+    
+    <ng-container *ngSwitchCase="1">
+        <div class="thf-row">
+            <thf-button
+                class="thf-md-3"
+                t-label="Adicionar Leilão"
+                (t-click)="addItem()">
+            </thf-button>
+        </div>
+
+        <thf-widget
+            *ngFor="let item of items"
+            class="thf-md-3 thf-mt-1 thf-mb-1"
+            t-primary-label="Excluir"
+            (t-primary-action)="deleteAuction(item)"
+            t-secondary-label="Ativar">
+
+            <app-auction [template_type]=template_type></app-auction>   
+        </thf-widget>
+    </ng-container>
+
+    <ng-container *ngSwitchCase="2">
+        <app-auction *ngFor="let item of items" [template_type]=template_type></app-auction>
+    </ng-container>
+
+    <ng-container *ngSwitchCase="3">
+        <app-auction *ngFor="let item of items" [template_type]=template_type></app-auction>
+    </ng-container>
+</ng-container>
+
+
+
