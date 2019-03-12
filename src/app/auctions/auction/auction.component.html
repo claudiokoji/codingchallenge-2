@@ -45,7 +45,7 @@
             <img [src]="photo_url" width="100" height="80">
         </div>
         
-        <div class="thf-md-3">
+        <div class="thf-md-2">
             <p class="thf-font-text-large-bold"> {{ name }} </p>
         </div>
 
@@ -57,6 +57,53 @@
         <div class="thf-md-3">
             <p class="thf-font-text-large-bold"> R$ {{ base_price | number:'.2' }}  </p>
         </div>
+
+
+        <thf-button
+          class="thf-md-1"
+          [t-icon]="detailIcon"
+          [t-type]="detailType"
+          (t-click)="showDetailsClick()">
+        </thf-button>
+
+
+        <div class="thf-md-12 thf-mt-1 thf-mb-1" *ngIf="showDetails">
+          <thf-widget
+          class="thf-md-4 thf-mt-1 thf-mb-1">
+
+          <div class="thf-font-display thf-text-center">36</div>
+          <div class="thf-text-center">Lances Recebidos</div>
+
+        </thf-widget>
+
+        <thf-widget
+          class="thf-md-4 thf-mt-1 thf-mb-1">
+          <thf-chart
+            class="thf-md-12"
+            t-title="Evolução"
+            t-height="260"
+            t-type="line"
+            [t-categories]="categories"
+            [t-series]="series">
+          </thf-chart>
+        </thf-widget>
+
+        <thf-widget
+          class="thf-md-4 thf-mt-1 thf-mb-1">
+          <thf-chart
+            class="thf-md-12"
+            t-title="Evolução"
+            t-height="260"
+            t-type="line"
+            [t-categories]="categories"
+            [t-series]="series">
+          </thf-chart>
+        </thf-widget>
+
+  
+
+    
+       </div>
 
       </div>
     </thf-widget>

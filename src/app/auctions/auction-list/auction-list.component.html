@@ -16,19 +16,18 @@
             (t-primary-action)="deleteAuction(item)"
             t-secondary-label="Ativar">
 
-            <app-auction [template_type]=template_type ></app-auction>   
+            <app-auction [template_type]=template_type></app-auction>   
         </thf-widget>
     </ng-container>
 
     <ng-container *ngSwitchCase="2">
-        <app-auction *ngFor="let item of items" [template_type]=template_type ></app-auction>
+        <app-auction *ngFor="let item of items" [template_type]=template_type></app-auction>
     </ng-container>
 
     <ng-container *ngSwitchCase="3">
-        <app-auction *ngFor="let item of items" [template_type]=template_type ></app-auction>
+        <app-auction *ngFor="let item of items" [template_type]=template_type></app-auction>
     </ng-container>
 </ng-container>
-
 
 
 
