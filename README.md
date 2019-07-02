@@ -1,10 +1,14 @@
 # Desafio Front-End
 
+Minha primeira modificação.
+
 A TOTVS quer lançar um site de leilões. Foi feita uma planning com o time o qual você é integrante e a sprint começou. Suas tarefas são as seguintes:
 
 ## Eu, enquanto usuário, quero poder fazer o login na aplicação para acessar a Home utilizando meu usuário e senha previamente fornecidos.
 
 A página de login deve respeitar as seguintes características:
+
+Minha segunda modificação.
 
 - Validação do formato de e-mail.
 - Senha não deve ficar visível enquanto digitada.
@@ -15,6 +19,8 @@ Bônus:
 Inserir uma opção "Lembrar-me" que, quando marcada no momento do login, consiste as informações do usuário para que ele não precise fazer login toda vez que a tela recarregar.
 
 ## Eu, enquanto usuário, dado que já estou autenticado no sistema, quero poder criar um leilão para vender um produto, inserindo as informações do mesmo (nome do produto, foto, preço base, formato de lance).
+
+Minha ultima modificação.
 
 A página para criar leilão deve ser acessível através de um menu na Home da aplicação e deve respeitar as seguintes características:
 
